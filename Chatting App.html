@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Chatting App</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chatting App</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <style>
             body{
-    font-family:Arial;
+    font-family:Arial
 }
 #content{
     visibility:hidden;
@@ -115,7 +115,7 @@ svg:active{
 }
 #chatContent{
     height:60%;
-    overflow:scroll;
+    overflow:auto;
 }
 header{
     height:60px;
@@ -187,7 +187,7 @@ pre{
 }
         </style>
     </head>
-    <body onload="$('.loader').css('display','none')">
+    <body>
         <div class="loader">L</div>
         <div class="loader">O</div>
         <div class="loader">A</div>
@@ -207,8 +207,6 @@ pre{
             <hr>
             <div id="menuOption" onclick="$('#chatContent').html('');$('#Menu').hide('slow');$('#input').focus()">Clear Chat</div>
             <hr>
-            <div id="menuOption" onclick="playSong()">Music</div>
-            <hr>
             <div id="menuOption" onclick="info()">Help</div>
         </div>
         <div id="chat">
@@ -222,13 +220,14 @@ pre{
             
         </pre>
         </div>
-        <input id="input" placeholder="Type a message"><span id="span"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon" viewBox="0 0 16 16">
+        <input id="input" placeholder="Type a message"><a href="#chat-message"><span id="span"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-</svg></span>
+</svg></span></a>
     </div>
 <script>
     setTimeout(function(){
         $('#content').css('visibility','visible');
+        $('.loader').css('display','none')
         info();
     },2000);
     $(function(){
@@ -245,6 +244,7 @@ pre{
         message = message.replace("<","&#60;");
         message = message.replace(">","&#62;");
         message = message.replace("'","&#39;");
+        message = message.replace("/","&#47;");
         var messages = $("#chatContent").html();
         $("#chatContent").html()
         $("#chatContent").html(messages +`
@@ -263,17 +263,20 @@ pre{
             if(array.includes(message)){
                 text = message;
             }
-            if(array1.includes(message)){
+            else if(array1.includes(message)){
                 text = "fine";
             }
-            if(array2.includes(message)){
+            else if(array2.includes(message)){
                 text = "Thank you 😀";
             }
-            if(thanks.includes(message)){
+            else if(thanks.includes(message)){
                 text = "Welcome !";
             }
-            if(yeah.includes(message)){
+            else if(yeah.includes(message)){
                 text = "yeah";
+            }
+            else if((message[message.length - 1])=="?"){
+            text = "idk"
             }
         }
         if(message=="play rock paper scissor"){
@@ -290,7 +293,6 @@ pre{
             }
         }
         $("#input").val("");
-        location.href = "#chat-message";
         $("#input").focus();
         setTimeout(function(){reply(text);},1000);
         }
@@ -344,35 +346,17 @@ function swalColours(){
 }
 $(function(){
 function backgroundColor(){
-    var input1 = $("#input1").val();
-    var input2 = $("#input2").val();
-    var input3 = $("#input3").val();
-    var backgroundColour = "rgb("+input1+","+input2+","+input3+")"
+    var backgroundColour = "rgb("+$("#input1").val()+","+$("#input2").val()+","+$("#input3").val()+")"
     $("body").css("background-color",backgroundColour);
     $("#colour").css("background-color",backgroundColour);
     $("#rgb").val(backgroundColour)}
     setInterval(backgroundColor,1);
 })
-var songPlaying = 1;
-function playSong(){
-    if(songPlaying){
-        songPlaying=0;
-        document.getElementById("song").play();
-        $("#Menu").hide("slow");
-        $("#input").focus();
-    }
-    else{
-        songPlaying=1;
-        document.getElementById("song").pause();
-        $("#Menu").hide("slow");
-        $("#input").focus();
-        
-    }
+setInterval(function(){
+if($("#Menu").css("display")=="none"){
+    $("#input").focus();
 }
-
+})
 </script>
-<audio loop id="song" style="opacity:0;">
-  <source src="https://docs.google.com/uc?export=open&id=1FmiCtwOLmMZWtyP50391_hWbV73bQ14X">
-</audio>
     </body>
 </html>
