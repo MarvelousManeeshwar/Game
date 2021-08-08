@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<title>Incredible India</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_tfF-S8_LoU48Se4pz0ZKviF_PNXh9ykCw&usqp=CAU" type="image/png" sizes="16x16">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+html{
+    scroll-behavior:smooth;
+}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_tfF-S8_LoU48Se4pz0ZKviF_PNXh9ykCw&usqp=CAU" style="width:45%;" class="w3-round">
+    <br><br>
+    <h4><b>Incredible India</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#india" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>India</a> 
+    <a href="#gomateshwara" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Gomateshwara</a> 
+    <a href="#hampi" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Hampi</a>
+    <a href="#harmandir" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Harmandir Sahib Golden Temple</a>
+    <a href="#khajuraho" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Khajuraho</a>
+    <a href="#konark" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Konark Sun Temple</a>
+    <a href="#nalanda" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Nalanda</a>
+    <a href="#tajMahal" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Taj Mahal</a>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_tfF-S8_LoU48Se4pz0ZKviF_PNXh9ykCw&usqp=CAU" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>Incredible India</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+    </div>
+    </div>
+  </header>
+  <div class="w3-container w3-padding-large" id="idea">
+    <h4><b>India</b></h4>
+    <p>India is a great country where people speak different languages but the national language is Hindi. India is full of different castes, creeds, religion, and cultures but they live together. That’s the reasons India is famous for the common saying of “unity in diversity“. India is the seventh-largest country in the whole world. Do you know that there are 7 wonders in India ? <br><br>Let's explore the 7 wonderful places of India!</p>
+    <hr></div>
+    <div class="w3-container w3-padding-large" style="position:relative;bottom:40px">
+    <div class="w3-third">
+      <h3>POPULAR PLACES</h3>
+      <p>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom" onclick="page('Gomateshwara')">Gomateshwara</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom" onclick="page('Hampi')">Hampi</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom" onclick="page('Harmandir')">Golden Temple</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom" onclick="page('Khajuraho')">Khajuraho</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom" onclick="page('Konark')">Konark</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom" onclick="page('Nalanda')">Nalanda</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom" onclick="page('TajMahal')">Taj Mahal</span> 
+      </p>
+    </div>
+
+  </div>
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom" onclick="page('Gomateshwara')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgeKPYmV3d4b1ssQVGisgrXyAZvVmLSRbtiA&usqp=CAU" alt="Norway" style="width:100%" class="w3-hover-opacity" id="gomateshwara">
+      <div class="w3-container w3-white">
+        <p><b>Gomateshwara</b></p>
+        <p>The Gommateshwara statue is the tallest monolithic statue in the world, carved out of a single block of granite. It is 57-foot high monolithic and located on Vindyagiri at Shravanbelagola in the Indian state of Karnataka. It is so tall that it can be seen from 30 km away</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom" onclick="page('Hampi')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJmdAW-CJ0Y4HoXZT30VcRYbebCJrtnaO2g&usqp=CAU" alt="Norway" style="width:100%" class="w3-hover-opacity" id="hampi">
+      <div class="w3-container w3-white">
+        <p><b>Hampi</b></p>
+        <p>Hampi was the capital of the Vijayanagara Empire in the 14th century. Chronicles left by Persian and European travellers, particularly the Portuguese, say that Hampi was a prosperous, wealthy and grand city near the Tungabhadra River, with numerous temples, farms and trading markets. By 1500 CE, Hampi-Vijayanagara was the world's second-largest medieval-era city after Beijing, and probably India's richest at that time, attracting traders from Persia and Portugal. The Vijayanagara Empire was defeated by a coalition of Muslim sultanates; its capital was conquered, pillaged and destroyed by sultanate armies in 1565, after which Hampi remained in ruins.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container" onclick="page('Harmandir')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB4CO-ZXfUvvJgd5GiTO0yPMSgGUhC-AH9Gg&usqp=CAU" alt="Norway" style="width:100%" class="w3-hover-opacity" id="harmandir">
+      <div class="w3-container w3-white">
+        <p><b>Harmandir Sahib Gold Temple</b></p>
+        <p>The Golden Temple (also known as harmandir sahib) is a gurdwara located in the city of Amritsar, Punjab, India. It is the preeminent spiritual site of Sikhism.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom" onclick="page('Khajuraho')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-3CcJbTUIroph9UEEmpul3QXrBAwRgH759Q&usqp=CAU" alt="Norway" style="width:100%" class="w3-hover-opacity" id="khajuraho">
+      <div class="w3-container w3-white">
+        <p><b>Khajuraho</b></p>
+        <p>The Khajuraho Group of Monuments are a group of Hindu and Jain temples in Chhatarpur district, Madhya Pradesh, India, about 175 kilometres southeast of Jhansi. They are a UNESCO World Heritage Site. The temples are famous for their nagara-style architectural symbolism and their erotic sculptures.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom" onclick="page('Konark')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJiwypdqcfWDnOOe788IJK9NzVNuOit34HgQ&usqp=CAU" alt="Norway" style="width:100%" class="w3-hover-opacity" id="konark">
+      <div class="w3-container w3-white">
+        <p><b>Konark Sun Temple</b></p>
+        <p>Konark is a medium town in the Puri district in the state of Odisha, India. It lies on the coast by the Bay of Bengal, 60 kilometres from the capital of the state, Bhubaneswar. It is the site of the 13th-century Sun Temple, also known as the Black Pagoda, built in black granite during the reign of Narasimhadeva-I. The temple is a World Heritage Site. The temple is now mostly in ruins, and a collection of its sculptures is housed in the Sun Temple Museum, which is run by the Archaeological Survey of India.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container" onclick="page('Nalanda')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZW0aCWKeRoUFniaC1q3mhv424Onrsa__Rew&usqp=CAU" alt="Norway" style="width:100%" class="w3-hover-opacity" id="nalanda">
+      <div class="w3-container w3-white">
+        <p><b>Nalanda</b></p>
+        <p>Nalanda was a renowned Buddhist University in the ancient kingdom of Magadha (modern-day Bihar) in India. Pali was the main language which was used in the old Buddhist text. Buddhist texts describe it as a Mahavihara, a revered Buddhist monastery.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container" style="margin:20px 0px" onclick="page('TajMahal')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTLkTqyghDaQr8foGH-2YypIMdxzfATUJ8ew&usqp=CAU" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white" id="tajMahal">
+        <p><b>Taj Mahal</b></p>
+        <p>The Taj Mahal is an ivory-white marble mausoleum on the southern bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan (reigned from 1628 to 1658) to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan himself. The tomb is the centrepiece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.</p>
+      </div>
+    </div>
+  </div>
+
+
+  
+  </footer>
+  
+  <a href="#portfolio" style="text-decoration:none;"><div class="w3-black w3-center w3-padding-24">Back to Top</div></a>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function page(url){
+    str = "https://raw.githack.com/MarvelousManeeshwar/Game/main/"+url+".html" ;
+    window.open(str) ;
+}
+</script>
+
+</body>
+</html>
